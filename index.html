@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ralph den Houdijker — Building with AI Agents</title>
+    <title>Ralph den Houdijker | Building with AI Agents</title>
     <meta name="description" content="Personal portfolio of Ralph den Houdijker. Exploring the frontier of AI-assisted development with Claude Code and other AI agents.">
     <meta name="author" content="Ralph den Houdijker">
     <meta name="robots" content="index, follow">
@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://ralphdenhoudijker.com/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Ralph den Houdijker — Building with AI Agents">
+    <meta property="og:title" content="Ralph den Houdijker | Building with AI Agents">
     <meta property="og:description" content="Exploring the frontier of AI-assisted development. Projects built with Claude Code and other AI agents.">
     <meta property="og:image" content="https://ralphdenhoudijker.com/assets/Flavicon/RDHlogo300x.jpg">
     <meta property="og:url" content="https://ralphdenhoudijker.com">
@@ -179,6 +179,7 @@
             letter-spacing: -0.03em;
             line-height: 1.1;
             margin-bottom: 1.5rem;
+            white-space: nowrap;
         }
 
         .hero-subtitle {
@@ -456,6 +457,52 @@
             background: rgba(255, 255, 255, 0.02);
         }
 
+        /* ── Contact ── */
+        #contact {
+            background: var(--black);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-content {
+            max-width: 600px;
+        }
+
+        .contact-text {
+            font-size: 1.125rem;
+            color: var(--gray-400);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: var(--gray-200);
+        }
+
+        .contact-btn svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-btn:hover svg {
+            transform: translateX(4px);
+        }
+
         /* ── Footer ── */
         footer {
             padding: 3rem 2rem;
@@ -557,6 +604,7 @@
         <ul class="nav-links">
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -565,10 +613,10 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-greeting">// building with ai agents<span class="cursor"></span></p>
+            <p class="hero-greeting">// exploring ai agents<span class="cursor"></span></p>
             <h1>Ralph den Houdijker</h1>
             <p class="hero-subtitle">
-                Exploring the frontier of AI-assisted development. I build real-world applications using AI agents like Claude Code — turning ideas into shipped products.
+                I'm on a journey to explore what's possible with AI coding agents like Claude Code and OpenClaw. As someone who doesn't write code the traditional way, these tools give me the ability to turn my ideas into real, working products.
             </p>
             <a href="#projects" class="hero-cta">
                 View Projects
@@ -582,10 +630,10 @@
     <!-- Projects -->
     <section id="projects">
         <div class="section-container">
-            <p class="section-label fade-in">// 01 — Projects</p>
+            <p class="section-label fade-in">// 01 Projects</p>
             <h2 class="section-title fade-in">Built with AI Agents</h2>
             <p class="section-desc fade-in">
-                Each project below was built using AI coding agents — from concept to deployment. No templates, no boilerplate. Just prompts, iteration, and shipping.
+                Every project below was built entirely with AI coding agents. I use Claude Code as my primary tool, powered by models like Claude Opus and Claude Sonnet. The code, the architecture, the debugging: all driven by AI. I provide the vision and the decisions.
             </p>
 
             <div class="projects-grid">
@@ -598,13 +646,14 @@
                     </div>
                     <h3>Bazaarzoeker</h3>
                     <p>
-                        A platform to discover flea markets, brocantes, and antique fairs across Flanders. Features province filtering, date search, favorites, and calendar integration. Built as a progressive web app.
+                        A mobile app for iOS and Android to discover flea markets, brocantes, and antique fairs across Flanders. Filter by province, search by date, save your favorites, and add events straight to your calendar.
                     </p>
                     <div class="project-tech">
-                        <span>HTML/CSS/JS</span>
-                        <span>PWA</span>
+                        <span>React Native</span>
+                        <span>Expo</span>
+                        <span>TypeScript</span>
+                        <span>Supabase</span>
                         <span>Claude Code</span>
-                        <span>GitHub Pages</span>
                     </div>
                     <span class="project-link">
                         bazaarzoeker.be
@@ -615,23 +664,24 @@
                 </a>
 
                 <!-- Project: Propulse Podologie -->
-                <a href="https://propulsepodologie.be" target="_blank" rel="noopener" class="project-card fade-in">
+                <a href="https://propulse-podologie.be/" target="_blank" rel="noopener" class="project-card fade-in">
                     <div class="project-header">
                         <span class="project-number">02</span>
                         <span class="project-status">In Progress</span>
                     </div>
                     <h3>Propulse Podologie</h3>
                     <p>
-                        Website for a podiatry practice in Mortsel, Belgium. A clean, professional site with appointment booking, treatment overviews, and brand identity — designed in close collaboration with the client.
+                        A professional website for a podiatry practice in Mortsel, Belgium. Includes appointment booking, treatment overviews, and a full brand identity with custom fonts and animations. Built in close collaboration with the client.
                     </p>
                     <div class="project-tech">
                         <span>HTML/CSS/JS</span>
                         <span>Responsive</span>
+                        <span>SEO</span>
                         <span>Claude Code</span>
                         <span>GitHub Pages</span>
                     </div>
                     <span class="project-link">
-                        propulsepodologie.be
+                        propulse-podologie.be
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
                         </svg>
@@ -645,19 +695,19 @@
     <!-- About -->
     <section id="about">
         <div class="section-container">
-            <p class="section-label fade-in">// 02 — About</p>
+            <p class="section-label fade-in">// 02 About</p>
             <h2 class="section-title fade-in">The Human Behind the Prompts</h2>
 
             <div class="about-grid">
                 <div class="about-text fade-in">
                     <p>
-                        I'm Ralph den Houdijker — curious by nature, always looking for the next thing to build. I've been exploring how AI agents can transform the way we create software.
+                        I'm Ralph den Houdijker. I'm not a developer in the traditional sense, but I've always been full of ideas. For the longest time, I lacked the right tools to bring them to life in the digital world.
                     </p>
                     <p>
-                        Every project on this site was built using AI coding agents like Claude Code. I handle the vision, architecture decisions, and user experience — while collaborating with AI to write, debug, and ship the code.
+                        That changed when I discovered AI coding agents. Tools like Claude Code and OpenClaw now allow me to go from a concept in my head to a live, working product. I'm learning every day what these tools can do, and I'm sharing that journey here.
                     </p>
                     <p>
-                        This isn't about replacing developers. It's about amplifying what one person can do. A single idea can go from concept to a live product in days, not months.
+                        I handle the vision, the decisions, and the user experience. The AI helps me write, debug, and ship the code. Together, an idea can become a reality in days instead of months.
                     </p>
                 </div>
 
@@ -666,6 +716,7 @@
                         <h4>AI Tools</h4>
                         <div class="tools-list">
                             <span>Claude Code</span>
+                            <span>OpenClaw</span>
                             <span>Claude Opus</span>
                             <span>Claude Sonnet</span>
                         </div>
@@ -687,10 +738,29 @@
         </div>
     </section>
 
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-container">
+            <p class="section-label fade-in">// 03 Contact</p>
+            <h2 class="section-title fade-in">Got an idea? Let's build it.</h2>
+            <div class="contact-content fade-in">
+                <p class="contact-text">
+                    Like what you see? Maybe you have a business, a project, or just an idea that deserves its own place on the web. I can help you bring it to life using AI coding agents. Whether it's a website, an app, or something completely new, feel free to reach out and let's talk about what's possible.
+                </p>
+                <a href="contact.html" class="contact-btn">
+                    Get in touch
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <span class="footer-text">&copy; 2025 Ralph den Houdijker</span>
+            <span class="footer-text">&copy; 2026 Ralph den Houdijker</span>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/ralphdenhoudijker/" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="https://github.com/RalphdnH" target="_blank" rel="noopener">GitHub</a>

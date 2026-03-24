@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ralph den Houdijker</title>
+    <meta name="description" content="Get in touch with Ralph den Houdijker. Have an idea for a website, app, or digital product? Let's talk about what's possible with AI coding agents.">
+    <meta name="author" content="Ralph den Houdijker">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" href="assets/Flavicon/RdH.PNG">
+    <link rel="canonical" href="https://ralphdenhoudijker.com/contact.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-500: #737373;
+            --gray-600: #525252;
+            --gray-800: #262626;
+            --gray-900: #171717;
+            --gray-950: #0a0a0a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--black);
+            color: var(--gray-200);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        ::selection {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* ── Navigation ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo span {
+            font-weight: 300;
+            color: var(--gray-500);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--white);
+        }
+
+        /* ── Contact Page ── */
+        .contact-page {
+            min-height: 100vh;
+            padding: 10rem 2rem 6rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-container {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .contact-container h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-intro {
+            font-size: 1.125rem;
+            color: var(--gray-400);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 3.5rem;
+            max-width: 600px;
+        }
+
+        /* ── Form ── */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6875rem;
+            color: var(--gray-500);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background: var(--gray-950);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            padding: 0.875rem 1rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+            width: 100%;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--gray-600);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 160px;
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        .form-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--black);
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+
+        .form-submit:hover {
+            background: var(--gray-200);
+        }
+
+        .form-submit svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .form-submit:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* ── Success Message ── */
+        .form-success {
+            display: none;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--gray-950);
+        }
+
+        .form-success h3 {
+            font-size: 1.25rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-success p {
+            color: var(--gray-400);
+            font-size: 0.9375rem;
+        }
+
+        .form-success.visible {
+            display: block;
+        }
+
+        /* ── Footer ── */
+        footer {
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--black);
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-text {
+            font-size: 0.8125rem;
+            color: var(--gray-600);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.25rem;
+            }
+
+            .nav-links a {
+                font-size: 0.75rem;
+            }
+
+            .contact-page {
+                padding: 8rem 1.5rem 4rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-logo">RdH<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Page -->
+    <section class="contact-page">
+        <div class="contact-container">
+            <p class="section-label">// Contact</p>
+            <h1>Got an idea? Let's build it.</h1>
+            <p class="contact-intro">
+                Maybe you have a business, a project, or just an idea that deserves its own place on the web. I can help you bring it to life using AI coding agents. Whether it's a website, an app, or something completely new, tell me about it and let's see what's possible.
+            </p>
+
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mykbgkdl" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="project">What are you looking for?</label>
+                    <select id="project" name="project">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="website">A website</option>
+                        <option value="app">A mobile app</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell me about your idea</label>
+                    <textarea id="message" name="message" placeholder="Describe what you have in mind. The more detail, the better." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">
+                    Send message
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                <h3>Message sent!</h3>
+                <p>Thanks for reaching out. I'll get back to you as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <span class="footer-text">&copy; 2026 Ralph den Houdijker</span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/ralphdenhoudijker/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/RalphdnH" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('formSuccess');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    form.style.display = 'none';
+                    success.classList.add('visible');
+                }
+            } catch (error) {
+                // Fallback: open mailto
+                const name = data.get('name');
+                const email = data.get('email');
+                const message = data.get('message');
+                const project = data.get('project');
+                const subject = encodeURIComponent('Project inquiry from ' + name);
+                const body = encodeURIComponent('From: ' + name + ' (' + email + ')\nType: ' + project + '\n\n' + message);
+                window.location.href = 'mailto:ralphdenhoudijker@hotmail.com?subject=' + subject + '&body=' + body;
+            }
+        });
+    </script>
+
+</body>
+</html>
